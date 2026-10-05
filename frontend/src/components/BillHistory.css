@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --ink-charcoal: #4A4A4A;
+  --ink-gray: #CBCBCB;
+  --ink-ivory: #FFFFE3;
+  --ink-blue: #6D8196;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', monospace, cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--ink-ivory);
+  color: var(--ink-charcoal);
+}
+
+.history-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background-color: var(--ink-ivory);
+  background-image: radial-gradient(var(--ink-gray) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.pixel-card {
+  background-color: var(--ink-ivory);
+  border: 4px solid var(--ink-charcoal);
+  box-shadow: 6px 6px 0px 0px var(--ink-charcoal);
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.pixel-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.pixel-title {
+  font-size: 18px;
+  color: var(--ink-charcoal);
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.pixel-subtitle {
+  font-size: 10px;
+  color: var(--ink-blue);
+  margin: 0;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  font-size: 10px;
+  color: var(--ink-blue);
+  padding: 24px 0;
+}
+
+.history-item {
+  background-color: #ffffff;
+  border: 3px solid var(--ink-charcoal);
+  box-shadow: 4px 4px 0px 0px var(--ink-charcoal);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed var(--ink-gray);
+  padding-bottom: 8px;
+  font-size: 9px;
+}
+
+.bill-id {
+  color: var(--ink-blue);
+  font-weight: bold;
+}
+
+.bill-timestamp {
+  color: var(--ink-charcoal);
+}
+
+.history-item-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 9px;
+  color: var(--ink-charcoal);
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-item-total {
+  border-top: 2px solid var(--ink-charcoal);
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--ink-charcoal);
+}
