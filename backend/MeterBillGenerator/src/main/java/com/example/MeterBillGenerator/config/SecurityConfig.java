@@ -61,7 +61,7 @@ public class SecurityConfig {
                 )
 
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/error", "/user", "/api/user", "/api/user/**").permitAll()
+                        .requestMatchers("/", "/error", "/user", "/api/user", "/api/user/**", "/api/bills", "/api/bills/**").permitAll()
                         .anyRequest().authenticated()
                 );
 
@@ -71,7 +71,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:3000"));
+        config.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:3000","https://meterbill-frontend.onrender.com"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
